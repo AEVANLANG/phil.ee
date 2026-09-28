@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>~*~ phil's spaghetti goat zone ~*~</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff3fa4;--yel:#fff200;--cyan:#00e5ff;--lime:#7CFF3a;--purp:#5b1a8f;--ink:#1a0026;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#3a0a63 repeating-conic-gradient(#4b0f7d 0 25%,#2b0649 0 50%) 0 0/28px 28px;color:#fff;font-family:'VT323',monospace;font-size:22px;cursor:crosshair;overflow-x:hidden}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.45;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");animation:jit .4s steps(2) infinite}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:49;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+@keyframes jit{50%{transform:translate(-3px,2px)}}
+.wrap{max-width:760px;margin:0 auto;padding:10px}
+.mq{background:var(--yel);color:var(--ink);font-family:'Press Start 2P';font-size:11px;padding:8px 0;border:4px ridge var(--pink);white-space:nowrap;overflow:hidden}
+.mq span{display:inline-block;padding-left:100%;animation:mq 16s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+h1{font-family:'Press Start 2P';font-size:clamp(20px,6vw,38px);line-height:1.3;text-align:center;margin:22px 0 6px;background:linear-gradient(90deg,red,orange,var(--yel),var(--lime),var(--cyan),#a5f,var(--pink),red);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rb 3s linear infinite;filter:drop-shadow(3px 3px 0 #000)}
+@keyframes rb{to{background-position:300% 0}}
+.sub{text-align:center;font-size:26px;color:var(--cyan);transform:rotate(-1.5deg)}
+.box{background:#fdf6d8;color:var(--ink);border:4px outset #d8c9ff;padding:12px 14px;margin:18px 0;box-shadow:6px 6px 0 #000;position:relative}
+.box:nth-of-type(odd){transform:rotate(.6deg)}.box:nth-of-type(even){transform:rotate(-.7deg)}
+.box h2{font-family:'Press Start 2P';font-size:13px;margin:-24px 0 10px -6px;display:inline-block;background:var(--pink);color:#fff;padding:6px 8px;border:3px solid #000;transform:rotate(-2deg)}
+.box p{margin:6px 0;line-height:1.1}
+.gg{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+.goat{font-size:84px;display:inline-block;animation:wob 1.2s ease-in-out infinite;image-rendering:pixelated;filter:contrast(1.4) saturate(1.5);user-select:none}
+.goat:nth-child(2){animation-delay:-.6s;font-size:60px}
+@keyframes wob{0%,100%{transform:rotate(-10deg) translateY(0)}50%{transform:rotate(10deg) translateY(-14px)}}
+.tags span{display:inline-block;background:var(--purp);color:var(--yel);padding:2px 8px;margin:3px;border:2px solid #000;font-size:20px}
+ol{margin:6px 0;padding-left:30px}li{margin:4px 0;font-size:26px}
+.btn{display:block;text-align:center;font-family:'Press Start 2P';font-size:14px;color:#000;background:var(--lime);border:5px outset #fff;padding:16px 10px;text-decoration:none;margin:24px auto;max-width:520px;box-shadow:6px 6px 0 #000;animation:pulse .8s steps(2) infinite}
+.btn:hover{background:var(--yel)}.btn:active{border-style:inset}
+@keyframes pulse{50%{transform:scale(1.04) rotate(1deg)}}
+.blink{animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
+.shrine{background:linear-gradient(135deg,#ff3fa4,#7b2cff,#00e5ff);color:#fff;text-align:center;border:5px double #fff;padding:16px;margin:26px 0;box-shadow:6px 6px 0 #000}
+.shrine b{font-family:'Press Start 2P';font-size:15px;display:block;margin:8px 0;text-shadow:3px 3px 0 #000;line-height:1.5}
+.eq{display:flex;gap:4px;justify-content:center;align-items:flex-end;height:50px;margin:10px 0}
+.eq i{width:12px;background:var(--yel);border:2px solid #000;animation:eq .7s steps(5) infinite alternate}
+.eq i:nth-child(2n){animation-duration:.5s;background:var(--lime)}.eq i:nth-child(3n){animation-duration:.9s;background:var(--cyan)}
+@keyframes eq{from{height:6px}to{height:48px}}
+button.rand{font-family:'Press Start 2P';font-size:11px;background:var(--cyan);border:4px outset #fff;padding:12px;cursor:pointer;color:#000}
+button.rand:active{border-style:inset}
+#out{min-height:60px;margin-top:10px;font-size:26px;color:#c00}
+.foot{text-align:center;font-size:18px;color:#cfa;margin:20px 0 40px}
+.ctr{display:inline-block;background:#000;color:#0f0;padding:2px 8px;letter-spacing:4px;border:2px inset #666}
+.fly{position:fixed;pointer-events:none;z-index:60;font-size:26px;animation:fl 1s ease-out forwards}
+@keyframes fl{to{transform:translate(var(--x),-120px) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="grain"></div><div class="scan"></div>
+<div class="wrap">
+<div class="mq"><span>★ WELCOME 2 MY WEBSITE ★ THIS PAGE IS 100% UNDER CONSTRUCTION FOREVER ★ SIGN MY GUESTBOOK (JK THERE ISNT ONE) ★ SPAGHETTI ON A GOAT ★</span></div>
+
+<h1>~*~ PHIL'S ZONE ~*~</h1>
+<div class="sub">the homepage of a chaos gremlin</div>
+
+<div class="gg"><span class="goat">🐐</span><span class="goat">🍝</span><span class="goat">🐐</span></div>
+<p style="text-align:center">you are visitor #<span class="ctr" id="ctr">000000</span> <span class="blink">← wow!!</span></p>
+
+<div class="box"><h2>ABOUT ME</h2>
+<p>hi im phil. im 14, im indie/alt, and i love randomness more than is medically reasonable. this site has no purpose and that is the purpose.</p>
+<p class="tags"><span>alt</span><span>nerd</span><span>ur mom</span><span>random™</span><span>TV addict</span><span>music addict</span></p>
+</div>
+
+<div class="shrine">
+<div>💿 ✧ MY FAVORITE THING EVER ✧ 💿</div>
+<b>"SPEECHLESS"<br>by LADY GAGA</b>
+<div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<div class="box"><h2>MUSIC OBSESSIONS</h2>
+<p class="tags"><span>Lady Gaga 🖤</span><span>Katy Perry 🍒</span><span>Rihanna ☔</span><span>Beyoncé 🐝</span><span>Kesha 💸</span><span>Kanye West 🐻</span></div>
+
+<div class="box"><h2>TOP 3 SHOWS</h2>
+<ol><li>Modern Family</li><li>9-1-1</li><li>Glee</li></ol>
+<p>i will talk about these for hours. dont test me.</p>
+</div>
+
+<div class="box"><h2>PRESS FOR RANDOM</h2>
+<button class="rand" id="rb">PUSH ME 🎲</button>
+<div id="out">...nothing yet. be brave.</div>
+</div>
+
+<div class="box"><h2>SHOUTOUT</h2>
+<p>to all my friends. seriously. i wouldn't be here today without you. i love you. ok thats it bye 💗</p>
+</div>
+
+<a class="btn" href="https://www.tiktok.com/@spaghetti_on_a_goat" target="_blank" rel="noopener">▶ WATCH MY TIKTOK ◀<br><br>@spaghetti_on_a_goat</a>
+
+<div class="foot">best viewed in Internet Explorer 6 at 800x600<br>(made with publicly available stock elements)<br>© Phil · made with love and zero skill · <span class="blink">🚧 UNDER CONSTRUCTION 🚧</span></div>
+</div>
+
+<script>
+var c=document.getElementById('ctr'),n=Math.floor(Math.random()*90000)+1337;
+c.textContent=String(n).padStart(6,'0');
+var facts=["a goat has never once been on spaghetti. i checked. (i didn't.)","ur mom","fun fact: nobody asked, and yet here we are","you've left me speechless...","if you hear a goat, do not look for the spaghetti","hot take: every episode of 9-1-1 needs a tsunami","modern family had it figured out","quiz: are you a goat or a noodle?","this message has been brought to you by... [silence]","i have no idea what im doing","the spaghetti is a lie","if you are reading this, you are a goat","i am a goat, and i approve this message","the spaghetti is watching you","a goat is a noodle's best friend","this website is 100% under construction forever","you are a noodle, and i am a goat",];
+var cols=['#ff3fa4','#7CFF3a','#00e5ff','#fff200','#a55bff','#ff8a00'];
+document.getElementById('rb').onclick=function(){
+  document.getElementById('out').textContent=facts[Math.floor(Math.random()*facts.length)];
+  document.body.style.backgroundColor=cols[Math.floor(Math.random()*cols.length)];
+  burst(innerWidth/2,innerHeight/2,12);
+};
+var em=['🍝','🐐','✨','💖','🎤','🚒','🌈','💿','⭐'];
+function burst(x,y,k){for(var i=0;i<k;i++){var s=document.createElement('span');s.className='fly';s.textContent=em[Math.floor(Math.random()*em.length)];s.style.left=x+'px';s.style.top=y+'px';s.style.setProperty('--x',(Math.random()*240-120)+'px');document.body.appendChild(s);setTimeout(function(e){e.remove()},1000,s)}}
+document.addEventListener('click',function(e){burst(e.clientX,e.clientY,4)});
+var last=0;document.addEventListener('mousemove',function(e){var t=Date.now();if(t-last<70)return;last=t;var s=document.createElement('span');s.className='fly';s.style.fontSize='16px';s.textContent='✦';s.style.color=cols[Math.floor(Math.random()*cols.length)];s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';s.style.setProperty('--x','0px');document.body.appendChild(s);setTimeout(function(){s.remove()},1000)});
+</script>
+</body>
+</html>
